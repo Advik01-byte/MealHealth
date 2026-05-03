@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="standalone-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealHealth | Waitlist Table</title>
+    <script>
+      if (!localStorage.getItem("mealhealth-admin-session") && !sessionStorage.getItem("mealhealth-admin-session")) {
+        location.replace("index.html");
+      }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body class="standalone-page">
+    <div class="page-shell">
+      <header class="hero standalone-hero">
+        <nav class="topbar" aria-label="Primary">
+          <div class="brand">
+            <div class="brand-mark" aria-hidden="true">MH</div>
+            <div>
+              <p class="brand-kicker">MealHealth</p>
+              <p class="brand-subtitle">Waitlist admin</p>
+            </div>
+          </div>
+          <div class="nav-actions">
+            <a class="nav-pill" href="admin-dashboard.html">Dashboard</a>
+            <button class="nav-pill nav-button" type="button" id="logoutButton">Logout</button>
+          </div>
+        </nav>
+
+        <section class="standalone-grid">
+          <div class="page-copy">
+            <p class="eyebrow">Waitlist</p>
+            <h1>All waitlist emails in one table</h1>
+            <p class="lede">
+              This page reads the emails saved from the waitlist form and presents them in a
+              table format for easy viewing.
+            </p>
+            <div class="inline-actions">
+              <a class="button button-primary" href="../index.html#waitlist">Back to signup</a>
+              <a class="button button-secondary" href="../index.html">Back to home</a>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="table-meta">
+              <div>
+                <strong id="waitlistCount">0 emails</strong>
+                <div class="status-copy">Stored in localStorage on this browser.</div>
+              </div>
+              <button class="danger-button" type="button" id="clearEmailsButton">
+                Delete all stored emails
+              </button>
+            </div>
+            <div class="table-shell">
+              <table class="data-table" aria-describedby="waitlistCount">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Email</th>
+                    <th>Captured</th>
+                  </tr>
+                </thead>
+                <tbody id="waitlistTableBody"></tbody>
+              </table>
+              <div class="table-empty" id="waitlistEmpty" hidden>No emails have been collected yet.</div>
+            </div>
+          </div>
+        </section>
+      </header>
+    </div>
+
+    <script src="../assets/js/storage.js" defer></script>
+    <script src="../assets/js/auth.js" defer></script>
+    <script src="../assets/js/waitlist-admin.js" defer></script>
+  </body>
+</html>

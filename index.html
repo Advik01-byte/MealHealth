@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealHealth | Smarter Healthy Food Suggestions</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar" aria-label="Primary">
+          <div class="brand">
+            <div class="brand-mark" aria-hidden="true">MH</div>
+            <div>
+              <p class="brand-kicker">MealHealth</p>
+              <p class="brand-subtitle">Healthy food suggestions powered by multiple LLMs</p>
+            </div>
+          </div>
+          <div class="nav-actions">
+            <a class="nav-pill" href="#waitlist">Join waitlist</a>
+            <button class="nav-pill nav-button" type="button" id="adminOpen">Admin login</button>
+          </div>
+        </nav>
+
+        <section class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Meal planning, reimagined</p>
+            <h1>Get healthier food suggestions with layered AI confidence.</h1>
+            <p class="lede">
+              MealHealth combines multiple language models to compare answers and reduce
+              the chance of error, giving people clearer food ideas that fit their goals.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#waitlist">Join the waitlist</a>
+              <a class="button button-secondary" href="#story">See the brand story</a>
+            </div>
+
+            <div class="trust-row" aria-label="Key highlights">
+              <div class="trust-card">
+                <strong>Multiple LLMs</strong>
+                <span>Cross-checked outputs</span>
+              </div>
+              <div class="trust-card">
+                <strong>Healthy focus</strong>
+                <span>Suggestions built around better choices</span>
+              </div>
+              <div class="trust-card">
+                <strong>Simple experience</strong>
+                <span>Clean, fast, and easy to use</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-label="App preview">
+            <div class="preview-window">
+              <div class="preview-top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="preview-content">
+                <p class="preview-label">Today's suggestion</p>
+                <h2>Balanced quinoa bowl</h2>
+                <p>
+                  A colorful meal with protein, fiber, and fresh ingredients for a
+                  steady-energy lunch.
+                </p>
+
+                <div class="score-card">
+                  <div>
+                    <span class="metric">92%</span>
+                    <span class="metric-label">Model agreement</span>
+                  </div>
+                  <div>
+                    <span class="metric">High</span>
+                    <span class="metric-label">Nutrition match</span>
+                  </div>
+                </div>
+
+                <ul class="preview-list">
+                  <li>Lean protein</li>
+                  <li>Fresh greens</li>
+                  <li>Healthy fats</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </section>
+      </header>
+
+      <main>
+        <section class="section story" id="story">
+          <div class="section-heading">
+            <p class="eyebrow">Brand story</p>
+            <h2>Our vision</h2>
+          </div>
+          <div class="story-card story-space" aria-hidden="true"></div>
+        </section>
+
+        <section class="section features">
+          <div class="section-heading">
+            <p class="eyebrow">Why it stands out</p>
+            <h2>Designed to look trustworthy, modern, and easy to explore</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>AI cross-checking</h3>
+              <p>
+                Multiple models can compare suggestions so the experience feels more
+                reliable and thoughtful.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Healthy-first design</h3>
+              <p>
+                The interface presents healthier options in a calm, appealing way that
+                feels premium without being complicated.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h3>Future-ready concept</h3>
+              <p>
+                The layout leaves room for product updates, more features, and your own
+                startup narrative.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section profile">
+          <div class="section-heading">
+            <p class="eyebrow">Founder details</p>
+            <h2>Young entrepreneur details</h2>
+          </div>
+
+          <div class="profile-grid">
+            <div class="profile-field">
+              <span class="field-label">Name</span>
+              <span class="field-value">[Add your name]</span>
+            </div>
+            <div class="profile-field">
+              <span class="field-label">Class</span>
+              <span class="field-value">[Add your class]</span>
+            </div>
+            <div class="profile-field">
+              <span class="field-label">School</span>
+              <span class="field-value">[Add your school]</span>
+            </div>
+            <div class="profile-field">
+              <span class="field-label">City</span>
+              <span class="field-value">[Add your city]</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section waitlist" id="waitlist">
+          <div class="waitlist-card">
+            <div class="waitlist-copy">
+              <p class="eyebrow">Join the waitlist</p>
+              <h2>Join the MealHealth waitlist</h2>
+            </div>
+
+            <form class="waitlist-form" id="waitlistForm" action="#" method="post" novalidate>
+              <label class="sr-only" for="email">Email address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+              />
+              <button type="submit">Join waitlist</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+    <div class="modal-backdrop" id="adminModal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Admin access</p>
+            <h2 id="adminTitle">Login</h2>
+          </div>
+          <button class="icon-button" type="button" id="adminClose" aria-label="Close admin login">
+            &times;
+          </button>
+        </div>
+
+        <form class="admin-form" id="adminLoginForm" novalidate>
+          <label>
+            <span>Email</span>
+            <input type="email" id="adminEmail" autocomplete="email" placeholder="admin@mealhealth.com" />
+          </label>
+          <label>
+            <span>Password</span>
+            <div class="password-field">
+              <input type="password" id="adminPassword" autocomplete="current-password" placeholder="Enter password" />
+              <button class="password-toggle" type="button" data-password-toggle="adminPassword" aria-label="Show password">
+                <span class="password-icon password-icon-show" aria-hidden="true"></span>
+                <span class="password-icon password-icon-hide" aria-hidden="true"></span>
+              </button>
+            </div>
+          </label>
+          <label class="remember-me">
+            <input type="checkbox" id="rememberMe" />
+            <span>Remember me</span>
+          </label>
+          <button class="modal-button" type="submit">Sign in</button>
+          <a class="modal-link" href="pages/recover.html">Forgot password?</a>
+          <div class="login-alert" id="loginAlert" role="alert" aria-live="assertive" hidden></div>
+        </form>
+      </div>
+    </div>
+
+    <script src="assets/js/storage.js" defer></script>
+    <script src="assets/js/auth.js" defer></script>
+    <script src="assets/js/auth-ui.js" defer></script>
+    <script src="assets/js/email-check.js" defer></script>
+    <script src="assets/js/admin.js" defer></script>
+  </body>
+</html>

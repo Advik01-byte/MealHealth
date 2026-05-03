@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="standalone-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MealHealth | Admin Dashboard</title>
+    <script>
+      if (!localStorage.getItem("mealhealth-admin-session") && !sessionStorage.getItem("mealhealth-admin-session")) {
+        location.replace("index.html");
+      }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body class="standalone-page">
+    <div class="page-shell">
+      <header class="hero standalone-hero">
+        <nav class="topbar" aria-label="Primary">
+          <div class="brand">
+            <div class="brand-mark" aria-hidden="true">MH</div>
+            <div>
+              <p class="brand-kicker">MealHealth</p>
+              <p class="brand-subtitle">Admin dashboard</p>
+            </div>
+          </div>
+          <div class="nav-actions">
+            <a class="nav-pill" href="../index.html">Home</a>
+            <button class="nav-pill nav-button" type="button" id="logoutButton">Logout</button>
+          </div>
+        </nav>
+
+        <section class="standalone-grid">
+          <div class="page-copy">
+            <p class="eyebrow">Logged in</p>
+            <h1>Welcome to the admin version of MealHealth</h1>
+            <p class="lede" id="adminGreeting">
+              You can manage recovery codes and view the waitlist from here.
+            </p>
+            <div class="inline-actions">
+              <a class="button button-primary" href="waitlist-admin.html">Open waitlist table</a>
+              <a class="button button-secondary" href="recover.html">Request recovery code</a>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <div class="table-meta">
+              <div>
+                <strong>Admin permissions</strong>
+                <div class="status-copy">Waitlist table access and password reset tools are enabled.</div>
+              </div>
+            </div>
+            <div class="status-box">
+              Use the logout button when you are done.
+            </div>
+          </div>
+        </section>
+      </header>
+    </div>
+
+    <script src="../assets/js/storage.js" defer></script>
+    <script src="../assets/js/auth.js" defer></script>
+    <script src="../assets/js/admin-dashboard.js" defer></script>
+  </body>
+</html>
