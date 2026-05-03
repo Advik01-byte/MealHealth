@@ -1,0 +1,23 @@
+├── MealHealth/
+    ├── assets/
+        ├── css/
+            └── style.css
+        ├── js/
+            ├── admin-dashboard.js
+            ├── admin.js
+            ├── auth-ui.js
+            ├── auth.js
+            ├── email-check.js
+            ├── recover.js
+            ├── reset-password.js
+            ├── storage.js
+            └── waitlist-admin.js
+    ├── pages/
+        ├── admin-dashboard.html
+        ├── recover.html
+        ├── reset-password.html
+        └── waitlist-admin.html
+    ├── "File Structure.txt"
+    ├── index.html
+    ├── package.json
+    └── server.js
