@@ -7,7 +7,7 @@
     return Boolean(getSession());
   }
 
-  function requireAdmin(redirectUrl = "index.html") {
+  function requireAdmin(redirectUrl = "/index.html") {
     if (!isLoggedIn()) {
       window.location.replace(redirectUrl);
       return false;
@@ -23,7 +23,7 @@
     return window.MealHealthStore?.signInAdminWithRemember?.(email, rememberMe);
   }
 
-  function signOut(redirectUrl = "index.html") {
+  function signOut(redirectUrl = "/index.html") {
     window.MealHealthStore?.signOutAdmin?.();
     window.location.replace(redirectUrl);
   }

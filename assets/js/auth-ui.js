@@ -5,13 +5,13 @@
 
   if (session) {
     navActions.innerHTML = `
-      <a class="nav-pill" href="admin-dashboard.html">Dashboard</a>
-      <a class="nav-pill" href="waitlist-admin.html">Waitlist table</a>
+      <a class="nav-pill" href="/pages/admin-dashboard.html">Dashboard</a>
+      <a class="nav-pill" href="/pages/waitlist-admin.html">Waitlist table</a>
       <button class="nav-pill nav-button" type="button" id="authLogout">Logout</button>
     `;
 
     document.getElementById("authLogout")?.addEventListener("click", () => {
-      window.MealHealthAuth?.signOut?.("index.html");
+      window.MealHealthAuth?.signOut?.("/index.html");
     });
     return;
   }
