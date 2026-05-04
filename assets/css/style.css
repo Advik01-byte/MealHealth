@@ -901,9 +901,10 @@ button {
 }
 
 .remember-me {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: nowrap;
   color: var(--muted);
   font-size: 0.95rem;
   user-select: none;
@@ -920,8 +921,9 @@ button {
 }
 
 .remember-me span {
+  display: inline;
   line-height: 1;
-  display: block;
+  white-space: nowrap;
 }
 
 .inline-actions {
