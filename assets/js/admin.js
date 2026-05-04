@@ -97,7 +97,7 @@
     if (rememberMe) rememberMe.checked = false;
     window.MealHealthAuth?.signInWithRemember?.(email, shouldRemember);
     closeModal();
-    window.location.href = "/pages/admin-dashboard.html";
+    window.location.href = "/MealHealth/pages/admin-dashboard.html";
   });
 
   adminEmail?.addEventListener("input", clearInlineError);

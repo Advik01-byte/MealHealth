@@ -36,7 +36,7 @@
   renderTable();
 
   logoutButton?.addEventListener("click", () => {
-    window.MealHealthAuth?.signOut?.("/index.html");
+    window.MealHealthAuth?.signOut?.("/MealHealth/index.html");
   });
 
   clearEmailsButton?.addEventListener("click", () => {
