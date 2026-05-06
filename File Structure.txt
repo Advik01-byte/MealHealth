@@ -2,7 +2,7 @@
     ├── assets/
         ├── css/
             └── style.css
-        ├── js/
+        └── js/
             ├── admin-dashboard.js
             ├── admin.js
             ├── auth-ui.js
@@ -12,6 +12,35 @@
             ├── reset-password.js
             ├── storage.js
             └── waitlist-admin.js
+    ├── MealHealth_App/
+        ├── .vscode/
+            └── settings.json
+        ├── bin/
+            ├── App.class
+            ├── DietGoal.class
+            ├── MealComplexity.class
+            ├── MealHealthFrame.class
+            ├── MealHealthFrame$CompoundRoundedBorder.class
+            ├── MealHealthFrame$GradientPanel.class
+            ├── MealProfile.class
+            ├── MealRecommendation.class
+            ├── MealSuggestionEngine.class
+            └── MealTime.class
+        ├── lib/
+        └── src/
+            ├── App.class
+            ├── App.java
+            ├── DietGoal.class
+            ├── MealComplexity.class
+            ├── MealHealthFrame.class
+            ├── MealHealthFrame.java
+            ├── MealHealthFrame$CompoundRoundedBorder.class
+            ├── MealHealthFrame$GradientPanel.class
+            ├── MealHealthModel.java
+            ├── MealProfile.class
+            ├── MealRecommendation.class
+            ├── MealSuggestionEngine.class
+            └── MealTime.class
     ├── pages/
         ├── admin-dashboard.html
         ├── recover.html
