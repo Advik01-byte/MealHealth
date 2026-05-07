@@ -3,15 +3,18 @@
         ├── css/
             └── style.css
         └── js/
-            ├── admin-dashboard.js
-            ├── admin.js
-            ├── auth-ui.js
-            ├── auth.js
-            ├── email-check.js
-            ├── recover.js
-            ├── reset-password.js
-            ├── storage.js
-            └── waitlist-admin.js
+            ├── admin/
+                ├── admin-dashboard.js
+                ├── admin.js
+                └── waitlist-admin.js
+            ├── auth/
+                ├── recover.js
+                └── reset-password.js
+            └── core/
+                ├── auth-ui.js
+                ├── auth.js
+                ├── email-check.js
+                └── storage.js
     ├── MealHealth_App/
         ├── .vscode/
             └── settings.json
@@ -27,20 +30,15 @@
             ├── MealSuggestionEngine.class
             └── MealTime.class
         ├── lib/
-        └── src/
-            ├── App.class
-            ├── App.java
-            ├── DietGoal.class
-            ├── MealComplexity.class
-            ├── MealHealthFrame.class
-            ├── MealHealthFrame.java
-            ├── MealHealthFrame$CompoundRoundedBorder.class
-            ├── MealHealthFrame$GradientPanel.class
-            ├── MealHealthModel.java
-            ├── MealProfile.class
-            ├── MealRecommendation.class
-            ├── MealSuggestionEngine.class
-            └── MealTime.class
+        ├── src/
+            ├── app/
+                └── App.java
+            ├── model/
+                └── MealHealthFrame.java
+            └── ui/
+                └── MealHealthModel.java
+            
+        └── README.md
     ├── pages/
         ├── admin-dashboard.html
         ├── recover.html

@@ -67,15 +67,26 @@ MealHealth/
 |   |-- css/
 |   |   `-- style.css
 |   `-- js/
-|       |-- admin.js
-|       |-- admin-dashboard.js
-|       |-- auth.js
-|       |-- auth-ui.js
-|       |-- email-check.js
-|       |-- recover.js
-|       |-- reset-password.js
-|       |-- storage.js
-|       `-- waitlist-admin.js
+|       |-- admin/
+|       |   |-- admin.js
+|       |   |-- admin-dashboard.js
+|       |   `-- waitlist-admin.js
+|       |-- auth/
+|       |   |-- recover.js
+|       |   `-- reset-password.js
+|       `-- core/
+|           |-- auth-ui.js
+|           |-- auth.js
+|           |-- email-check.js
+|           `-- storage.js
+|-- MealHealth_App/
+|   `-- src/
+|       |-- app/
+|       |   `-- App.java
+|       |-- model/
+|       |   `-- MealHealthModel.java
+|       `-- ui/
+|           `-- MealHealthFrame.java
 |-- server.js
 `-- package.json
 ```
@@ -83,7 +94,7 @@ MealHealth/
 ## Notes
 
 - This is a concept project, not a production service.
-- The admin credentials and demo data are seeded in `assets/js/storage.js`.
+- The admin credentials and demo data are seeded in `assets/js/core/storage.js`.
 - If you want to adapt this into a real product later, the next step would be replacing browser storage with a backend database and connecting the meal suggestion logic to an actual LLM pipeline.
 
 ## License

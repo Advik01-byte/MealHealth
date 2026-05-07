@@ -1,3 +1,5 @@
+package ui;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -6,7 +8,6 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.util.List;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
@@ -15,15 +16,17 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JCheckBox;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
+
+import model.MealHealthModel;
 
 public class MealHealthFrame extends JFrame {
     private static final Color BG_TOP = new Color(0xF7F2E8);
@@ -39,9 +42,9 @@ public class MealHealthFrame extends JFrame {
     private static final Color FIELD_BG = new Color(0xFBFCFB);
     private static final Color BORDER = new Color(0xDDE6E1);
 
-    private final JComboBox<DietGoal> goalBox;
-    private final JComboBox<MealComplexity> complexityBox;
-    private final JComboBox<MealTime> mealTimeBox;
+    private final JComboBox<MealHealthModel.DietGoal> goalBox;
+    private final JComboBox<MealHealthModel.MealComplexity> complexityBox;
+    private final JComboBox<MealHealthModel.MealTime> mealTimeBox;
     private final JCheckBox highProteinBox;
     private final JCheckBox dairyFreeBox;
     private final JCheckBox nutFreeBox;
@@ -55,7 +58,7 @@ public class MealHealthFrame extends JFrame {
     private final JLabel consensusLabel;
     private final JLabel scoreLabel;
 
-    private final MealSuggestionEngine engine = new MealSuggestionEngine();
+    private final MealHealthModel.MealSuggestionEngine engine = new MealHealthModel.MealSuggestionEngine();
 
     public MealHealthFrame() {
         setTitle("MealHealth Prototype");
@@ -73,9 +76,9 @@ public class MealHealthFrame extends JFrame {
         root.add(buildHeader(), BorderLayout.NORTH);
         root.add(buildBody(), BorderLayout.CENTER);
 
-        goalBox = new JComboBox<>(new DefaultComboBoxModel<>(DietGoal.values()));
-        complexityBox = new JComboBox<>(new DefaultComboBoxModel<>(MealComplexity.values()));
-        mealTimeBox = new JComboBox<>(new DefaultComboBoxModel<>(MealTime.values()));
+        goalBox = new JComboBox<>(new DefaultComboBoxModel<>(MealHealthModel.DietGoal.values()));
+        complexityBox = new JComboBox<>(new DefaultComboBoxModel<>(MealHealthModel.MealComplexity.values()));
+        mealTimeBox = new JComboBox<>(new DefaultComboBoxModel<>(MealHealthModel.MealTime.values()));
         highProteinBox = new JCheckBox("High protein");
         dairyFreeBox = new JCheckBox("Dairy free");
         nutFreeBox = new JCheckBox("Nut free");
@@ -248,16 +251,16 @@ public class MealHealthFrame extends JFrame {
     }
 
     private void generatePlan() {
-        MealProfile profile = new MealProfile(
-                (DietGoal) goalBox.getSelectedItem(),
-                (MealTime) mealTimeBox.getSelectedItem(),
-                (MealComplexity) complexityBox.getSelectedItem(),
+        MealHealthModel.MealProfile profile = new MealHealthModel.MealProfile(
+                (MealHealthModel.DietGoal) goalBox.getSelectedItem(),
+                (MealHealthModel.MealTime) mealTimeBox.getSelectedItem(),
+                (MealHealthModel.MealComplexity) complexityBox.getSelectedItem(),
                 highProteinBox.isSelected(),
                 dairyFreeBox.isSelected(),
                 nutFreeBox.isSelected(),
                 under30MinutesBox.isSelected());
 
-        MealRecommendation recommendation = engine.recommend(profile);
+        MealHealthModel.MealRecommendation recommendation = engine.recommend(profile);
 
         consensusLabel.setText(recommendation.getConsensusTitle());
         scoreLabel.setText("Consensus score: " + recommendation.getConsensusScore() + "/100");
@@ -287,7 +290,7 @@ public class MealHealthFrame extends JFrame {
         area.setEditable(false);
         area.setBackground(new Color(0xF8FAF9));
         area.setBorder(new EmptyBorder(12, 12, 12, 12));
-        area.setForeground(new Color(0x20312E));
+        area.setForeground(TEXT);
         area.setFont(new Font("SansSerif", Font.PLAIN, 14));
         return area;
     }

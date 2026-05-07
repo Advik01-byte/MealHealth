@@ -14,15 +14,15 @@ This is a standalone Java desktop prototype for **MealHealth**.
 Open the `MealHealth App` folder in VS Code and run:
 
 ```bash
-javac src\\*.java
-java -cp src App
+javac -d out src\\app\\App.java src\\ui\\MealHealthFrame.java src\\model\\MealHealthModel.java
+java -cp out app.App
 ```
 
 ## Files
 
-- `src/App.java` - app entry point
-- `src/MealHealthFrame.java` - Swing UI
-- `src/MealHealthModel.java` - meal data and recommendation logic
+- `src/app/App.java` - app entry point
+- `src/ui/MealHealthFrame.java` - Swing UI
+- `src/model/MealHealthModel.java` - meal data and recommendation logic
 
 ## Notes
 
