@@ -32,11 +32,22 @@
         ├── lib/
         ├── src/
             ├── app/
+                ├── App.class
                 └── App.java
             ├── model/
-                └── MealHealthFrame.java
+                ├── MealHealthModel.class
+                ├── MealHealthModel.java
+                ├── MealHealthModel$DietGoal.class
+                ├── MealHealthModel$MealComplexity.class
+                ├── MealHealthModel$MealProfile.class
+                ├── MealHealthModel$MealRecommendation.class
+                ├── MealHealthModel$MealSuggestionEngine.class
+                └── MealHealthModel$MealTime.class
             └── ui/
-                └── MealHealthModel.java
+                ├── MealHealthFrame.class
+                ├── MealHealthFrame.java
+                ├── MealHealthFrame$CompoundRoundedBorder.class
+                └── MealHealthFrame$GradientPanel.class
             
         └── README.md
     ├── pages/
