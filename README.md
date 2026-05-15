@@ -1,6 +1,6 @@
 # MealHealth
 
-MealHealth is a startup website I created as the final assignment for the ThinkStartup course in the Young Mind Entrepreneurship Program.
+MealHealth is a startup website that I created as the final assignment for the ThinkStartup course in the Young Mind Entrepreneurship Program.
 
 **The concept is simple:** Multiple LLMs work together to suggest a healthier meal idea for the user. This repository contains the website prototype for that startup idea, including the landing page, a waitlist form, and a small admin area for the demo flow.
 
